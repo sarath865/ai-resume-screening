@@ -1,0 +1,15 @@
+from sqlalchemy import Column, Integer, String
+from app.database import Base
+
+class Candidate(Base):
+    __tablename__ = "candidates"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    name = Column(String)
+    email = Column(String)
+    phone = Column(String)
+    skills = Column(String)
+    experience = Column(String)
+    education = Column(String)
+    resume_path = Column(String)
